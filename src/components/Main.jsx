@@ -33,7 +33,7 @@ const Main = () => {
             <div className="navbarTitle">
                 <img src="rk-logo.svg" alt="not available" />
                 <span className="profession-span">Web Designer & Dev</span>
-                <a href="" className="navbar-photo-tag">&lt;/&gt;</a>
+                <a href="" className="navbar-photo-tag"></a>
             </div>
         </div>
         <section className="main-text">

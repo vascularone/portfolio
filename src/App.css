@@ -65,6 +65,15 @@
   transition:all 0.5s ease;
   animation: animate 2s linear infinite alternate;
 }
+.navbar-photo-tag:after {
+  content:'</>';
+  animation: changeTXT 2s linear infinite alternate;
+}
+.navbar-photo-tag:hover:after{
+  font-size:45px;
+  content:'<menu>';
+  animation:stop;
+}
 .navbar-photo-tag:hover {
   color:#2b916c;
   border-color:#2b916c;
@@ -137,8 +146,14 @@
 
 @keyframes animate {
  
+  
   to {
     color:black;
   }
   
+}
+@keyframes changeTXT {
+  to {
+    content:'<\\>';
+  }
 }
