@@ -5,8 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(48,48,57);
+background: linear-gradient(180deg, rgba(48,48,57,1) 0%, rgba(168,21,58,1) 23%, rgba(200,13,48,1) 37%, rgba(255,0,48,1) 53%, rgba(255,252,248,1) 100%);
 }
-
+footer {
+  margin-top:12rem;
+  height:15rem;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
