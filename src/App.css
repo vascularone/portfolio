@@ -387,7 +387,55 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
   left:18rem;
   transition: all 2s;
   transform:translateY(10rem);
+}
+.contactMe {
+  height:30rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding-top:20rem;
+}
+.contactme-span{
+  font-size:70px;
+  font-weight:800;
+  text-shadow:2px 0 0 teal,0 2px 0 red,-2px 0 0 teal,0 -2px 0 red;
+  color:white;
+}
+.email-span {
+  position:relative;
+  font-weight:800;
+  font-size:20px;
+  top:5rem;
+  right:12.5rem;
+  text-shadow:2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal;
+  color:white;
+}
+.email-input {
+  position:relative;
+  right:13rem;
+  top:3.2rem;
+  height:28px;
+  width:300px;
+  background:transparent;
+  caret-color:teal;
+  font-size:18px;
+  font-weight:700;
+  transition: all 0.3s;
+}
 
+.contactMe form {
+  display:flex;
+  flex-direction:column;
+}
+.message-input {
+  width: 23rem;
+  height: 20rem;
+  /* display: inline-block; fix for Firefox */
+  /* use tb-rl instead of vertical-rl */
+  padding-top:5px;
+  padding-left:3px;
+  
 }
 @keyframes animate {
  

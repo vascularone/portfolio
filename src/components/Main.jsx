@@ -5,9 +5,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 const Main = () => {
-    const [message, setMessage] = useState(localStorage.getItem('message') || '');
-    const [messagetwo, setMessageTwo] = useState(localStorage.getItem('messagetwo') || '');
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [message, setMessage] = useState(localStorage.getItem('message') || 'Front-end Dev');
+    const [messagetwo, setMessageTwo] = useState(localStorage.getItem('messagetwo') || 'Mentor');
+    const [email, setEmail] = useState('');
+    const [emailLabelStyle, setEmailLabelStyle] = useState({});
+    const [nameLabelStyle, setNameLabelStyle] = useState({});
+    const [name, setName] = useState('');
+    const [messageLabelStyle, setMessageLabelStyle] = useState({});
+    const [messageContact, setMessageContact] = useState('');
     useEffect(() => {
         localStorage.setItem('message', message);
         localStorage.setItem('messagetwo', messagetwo);
@@ -21,19 +26,52 @@ const Main = () => {
         setMessage('Front-end Dev');
         setMessageTwo("Mentor");
     }
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        beforeChange: (current, next) => setCurrentSlide(next),
-      };
-
     window.addEventListener('scroll', () => {
         const scroll = window.scrollY;
         console.log(scroll);
     });
+    
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    
+        // Check if the input field is not empty
+        if (event.target.value !== '') {
+          setEmailLabelStyle({
+            transform: 'translateX(-5rem)',
+            transition: 'all 0.2s',
+          });
+        } else {
+          setEmailLabelStyle({
+            transition: 'all 0.3s'
+          });
+        }
+      };
+    const handleNameChange = (event) => {
+      setName(event.target.value);
+      if(event.target.value !== '') {
+        setNameLabelStyle({
+          transform: 'translateX(-6rem)',
+          transition: 'all 0.2s',
+        });
+      } else {
+        setNameLabelStyle({
+          transition: 'all 0.3s'
+        })
+      }
+    };
+    const handleMessageChange = (event) => {
+      setMessageContact(event.target.value);
+      if(event.target.value !== '') {
+        setMessageLabelStyle({
+          transform: 'translateX(-6.7rem)',
+          transition: 'all 0.2s',
+        });
+      } else {
+        setMessageLabelStyle({
+          transition: 'all 0.3s'
+        })
+      }
+    };
     useEffect(() => {
         const aboutMeText = document.querySelector(".aboutme-text");
         const aboutMeTextTwo = document.querySelector(".aboutme-text-two");
@@ -159,7 +197,7 @@ const Main = () => {
                 <section className="aboutme">
                 <span className='aboutme-title'>About me</span>
                 <span className="aboutme-text">Hi, I'm Rinor. I'm a student located in Prishtina, Kosovo.</span>
-                <span className="aboutme-text-two">I'm 20 years old and currently a freelancer.</span>
+                <span className="aboutme-text-two">I'm 20 years old and currently a teacher at <a href="https://programmers-uni-site-client-o8e972i1f-davud600.vercel.app/" className="prouni">Programmer's University</a></span>
                 <span className="aboutme-text-three">You can find me at <a href="https://www.linkedin.com/in/crkc/">LinkedIn</a></span>
                 <span className="aboutme-text-four">I enjoy creating responsive and interactive website which you can check out below!</span>
                 </section>
@@ -186,8 +224,20 @@ const Main = () => {
                 <img src="fourthSection.png" alt="" className='fourthImage'/>
         </div>
 
+        <div className="contactMe">
+          <span className="contactme-span">CONTACT ME</span>
+          <form>
+          <span className="email-span" style={emailLabelStyle}>Email</span>
+          <input type="email" className="email-input"  onChange={handleEmailChange} value={email} required/>
+          <span className="email-span" style={nameLabelStyle}>Subject</span>
+          <input type="text" className="email-input"  onChange={handleNameChange} value={name} required/>
+          <span className="email-span" style={messageLabelStyle}>Message</span>
+          {/* <input type="email" className="email-input message-input"  onChange={handleMessageChange} value={messageContact} required/> */}
+          <textarea className="email-input message-input" name="message" rows="4" cols="40" value={messageContact} onChange={handleMessageChange} required></textarea>
+          </form>
+        </div>
         <footer>
-        ®Copyright reserved by Rinor 
+        © Copyright 2023 Rinor 
         </footer>
     </div>
     
