@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { useForm, ValidationError } from '@formspree/react';
 
 const Main = () => {
     const [message, setMessage] = useState(localStorage.getItem('message') || 'Front-end Dev');
@@ -37,6 +37,7 @@ const Main = () => {
         // Check if the input field is not empty
         if (event.target.value !== '') {
           setEmailLabelStyle({
+            textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
             transform: 'translateX(-5rem)',
             transition: 'all 0.2s',
           });
@@ -51,6 +52,7 @@ const Main = () => {
       if(event.target.value !== '') {
         setNameLabelStyle({
           transform: 'translateX(-6rem)',
+          textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
           transition: 'all 0.2s',
         });
       } else {
@@ -64,6 +66,7 @@ const Main = () => {
       if(event.target.value !== '') {
         setMessageLabelStyle({
           transform: 'translateX(-6.7rem)',
+          textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
           transition: 'all 0.2s',
         });
       } else {
@@ -72,6 +75,8 @@ const Main = () => {
         })
       }
     };
+    
+    
     useEffect(() => {
         const aboutMeText = document.querySelector(".aboutme-text");
         const aboutMeTextTwo = document.querySelector(".aboutme-text-two");
@@ -82,8 +87,77 @@ const Main = () => {
         const secondImage = document.querySelector(".secondImage");
         const thirdImage = document.querySelector(".thirdImage");
         const fourthImage = document.querySelector(".fourthImage");
+        const contactC = document.querySelector(".C");
+        const contactO = document.querySelector(".O");
+        const contactN = document.querySelector(".N");
+        const contactT = document.querySelector(".T");
+        const contactA = document.querySelector(".A");
+        const contactCc = document.querySelector(".Cc");
+        const contactTt = document.querySelector(".Tt");
+        const contactM = document.querySelector(".M");
+        const contactE = document.querySelector(".E");
+        const contactMeInputs = document.querySelector(".contactMeInputs");
+        const submitButton = document.querySelector(".submit-button");
         window.addEventListener("scroll", () => {
           const scrollPosition = window.scrollY;
+          if(scrollPosition > 2670)
+          {
+            submitButton.style.transform = "translateX(0rem)";
+            submitButton.style.opacity = "1";
+            
+          } else {
+            submitButton.style.transform = "translateX(15rem)";
+            submitButton.style.opacity = "0";
+          }
+          if(scrollPosition > 2500)
+          {
+            contactMeInputs.style.transform = "translateX(0rem)";
+            contactMeInputs.style.opacity = "1";
+          } else {
+            contactMeInputs.style.transform = "translateX(-22rem)";
+            contactMeInputs.style.opacity = "0";
+          }
+          if(scrollPosition > 2350)
+          {
+            contactC.style.opacity = "1";
+            contactC.style.transform = "translateX(0rem)";
+            contactO.style.opacity = "1";
+            contactO.style.transform ="translateX(0rem) translateY(0rem)";
+            contactN.style.opacity = "1";
+            contactN.style.transform ="translateY(0rem)";
+            contactT.style.opacity = "1";
+            contactT.style.transform ="translateX(0rem) translateY(0rem)";
+            contactA.style.opacity = "1";
+            contactA.style.transform ="translateX(0rem) translateY(0rem)";
+            contactCc.style.opacity = "1";
+            contactCc.style.transform ="translateX(0rem) translateY(0rem)";
+            contactTt.style.opacity = "1";
+            contactTt.style.transform ="translateX(0rem) translateY(0rem)";
+            contactM.style.opacity = "1";
+            contactM.style.transform ="translateX(0rem) translateY(0rem)";
+            contactE.style.opacity = "1";
+            contactE.style.transform ="translateX(0rem) translateY(0rem)";
+            
+          } else {
+            contactC.style.opacity ="0";
+            contactC.style.transform = "translateX(-15rem)";
+            contactO.style.opacity = "0";
+            contactO.style.transform ="translateX(-10rem) translateY(-10rem)";
+            contactN.style.opacity = "0";
+            contactN.style.transform ="translateY(-10rem)";
+            contactT.style.opacity = "0";
+            contactT.style.transform ="translateX(10rem) translateY(-10rem)";
+            contactA.style.opacity = "0";
+            contactA.style.transform ="translateY(10rem)";
+            contactCc.style.opacity = "0";
+            contactCc.style.transform ="translateX(5rem) translateY(10rem)";
+            contactTt.style.opacity = "0";
+            contactTt.style.transform ="translateX(10rem) translateY(5rem)";
+            contactM.style.opacity = "0";
+            contactM.style.transform ="translateX(5rem) translateY(-10rem)";
+            contactE.style.opacity = "0";
+            contactE.style.transform ="translateX(15rem)";
+          }
           if(scrollPosition > 1800)
           {
             thirdImage.style.right = "0rem";
@@ -175,7 +249,7 @@ const Main = () => {
             <div className="navbarTitle">
                 <img src="rk-logo.svg" alt="not available" />
                 <span className="profession-span">Web Designer & Dev</span>
-                <a href="https://github.com/vascularone" className="navbar-photo-tag"></a>
+                <a href="https://github.com/vascularone" target="_blank" className="navbar-photo-tag"></a>
                 <span className="navbar-github">GitHub</span>
             </div>
         </div>
@@ -184,7 +258,7 @@ const Main = () => {
             <span className="main-text-second-main">{messagetwo}</span>
             <span className="main-text-second-text">Front-end  |  Teacher at ProUni KS  |  Student</span>
             <span className="main-text-third-text">Rinor Kastrati</span>
-            <a href="" className="contact-me-text" onMouseEnter={handleClick} onMouseLeave={handleClickLeave}>Contact me</a>
+            <a href="#contactMe" className="contact-me-text" onMouseEnter={handleClick} onMouseLeave={handleClickLeave}>Contact me</a>
         </section>
         </header>
         {/* <span className="letterR" id="letterR" name="letterR"></span>
@@ -197,8 +271,8 @@ const Main = () => {
                 <section className="aboutme">
                 <span className='aboutme-title'>About me</span>
                 <span className="aboutme-text">Hi, I'm Rinor. I'm a student located in Prishtina, Kosovo.</span>
-                <span className="aboutme-text-two">I'm 20 years old and currently a teacher at <a href="https://programmers-uni-site-client-o8e972i1f-davud600.vercel.app/" className="prouni">Programmer's University</a></span>
-                <span className="aboutme-text-three">You can find me at <a href="https://www.linkedin.com/in/crkc/">LinkedIn</a></span>
+                <span className="aboutme-text-two">I'm 20 years old and currently a teacher at <a href="https://programmers-uni-site-client-o8e972i1f-davud600.vercel.app/" target="_blank"className="prouni">Programmer's University</a></span>
+                <span className="aboutme-text-three">You can find me at <a href="https://www.linkedin.com/in/crkc/" target="_blank">LinkedIn</a></span>
                 <span className="aboutme-text-four">I enjoy creating responsive and interactive website which you can check out below!</span>
                 </section>
 
@@ -223,17 +297,28 @@ const Main = () => {
                 <img src="thirdSection.png" alt="" className='thirdImage'/>
                 <img src="fourthSection.png" alt="" className='fourthImage'/>
         </div>
-
-        <div className="contactMe">
-          <span className="contactme-span">CONTACT ME</span>
+        <div className="contactMe" id="contactMe">
+          <div className="contactMeText">
+          <span className="contactme-span C" id='contactme-span'>C</span>
+          <span className="contactme-span O" id='contactme-span'>O</span>
+          <span className="contactme-span N" id='contactme-span'>N</span>
+          <span className="contactme-span T" id='contactme-span'>T</span>
+          <span className="contactme-span A" id='contactme-span'>A</span>
+          <span className="contactme-span Cc" id='contactme-span'>C</span>
+          <span className="contactme-span Tt" id='contactme-span'>T</span>
+          <span className="contactme-span M" id='contactme-span'>M</span>
+          <span className="contactme-span E" id='contactme-span'>E</span>
+          </div>
           <form>
-          <span className="email-span" style={emailLabelStyle}>Email</span>
-          <input type="email" className="email-input"  onChange={handleEmailChange} value={email} required/>
-          <span className="email-span" style={nameLabelStyle}>Subject</span>
-          <input type="text" className="email-input"  onChange={handleNameChange} value={name} required/>
-          <span className="email-span" style={messageLabelStyle}>Message</span>
-          {/* <input type="email" className="email-input message-input"  onChange={handleMessageChange} value={messageContact} required/> */}
-          <textarea className="email-input message-input" name="message" rows="4" cols="40" value={messageContact} onChange={handleMessageChange} required></textarea>
+          <div className="contactMeInputs">
+          <span className="contact-span" style={emailLabelStyle}>Email</span>
+          <input type="email" className="contact-input email-input"  onChange={handleEmailChange} value={email} required/>
+          <span className="contact-span" style={nameLabelStyle}>Subject</span>
+          <input type="text" className="contact-input subject-input"  onChange={handleNameChange} value={name} required/>
+          <span className="contact-span" style={messageLabelStyle}>Message</span>
+          <textarea className="contact-input message-input" name="message" rows="4" cols="40" value={messageContact} onChange={handleMessageChange} required></textarea>
+          </div>
+          <button className="submit-button">Submit</button>
           </form>
         </div>
         <footer>

@@ -1,23 +1,17 @@
 .App {
 
 }
-/* .Slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
 
 header {
-  /* background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19%, rgba(184,31,58,1) 47%, rgba(81,19,30,1) 84%, rgba(29,27,27,1) 100%); */
 /* background: rgb(255,255,255);
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19%, rgba(184,31,58,1) 47%, rgba(81,19,30,1) 94%, rgba(29,27,27,1) 100%); */
 }
 .main-part
 {
-  /* background: rgb(90,222,174);
-background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100%); */
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(173,255,225,1) 50%, rgba(255,255,255,1) 100%);
 }
@@ -25,8 +19,6 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
   display:flex;
   flex-direction:row;
   text-align:center;
-  /* background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(122,227,189,1) 100%); */
   top:0;
   position:sticky;
   padding-left:3rem;
@@ -209,28 +201,7 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
   content:'ꓘ';
   position:relative;
 }
-/* .main-section {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100vw;
-  gap:2px;
-  flex-wrap:wrap;
-}
-.main-section .blockSpan {
-  position:relative;
-  display:block;
-  width: calc(6.25vw - 2px);
-  height: calc(6.25vw - 2px);
-  background:transparent;
-  z-index:0;
-  transition: 1.5s;
-  overflow:hidden;
-}
-.blockSpan:hover {
-  background-color:green;
-  transition:0s;
-} */
+
 .aboutme {
   display:flex;
   justify-content:center;
@@ -390,11 +361,65 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
 }
 .contactMe {
   height:30rem;
+  position:relative;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  padding-top:20rem;
+  padding-top:15rem;
+  transition: all 1.5s;
+}
+.contactMeInputs {
+  display:flex;
+  flex-direction:column;
+  opacity:1;
+  transform:translateX(-22rem);
+  transition:all 1.5s;
+}
+.contactMeText{
+  display:flex;
+  flex-direction:row;
+}
+.C , .O, .N, .T, .A, .Cc, .Tt, .M, .E {
+  position:relative;
+}
+.C {
+  transform:translateX(-15rem);
+  transition:all 0.8s ease;
+}
+.O {
+  transform:translateX(-10rem) translateY(-10rem);
+  transition:all 0.7s ease;
+}
+.N {
+  transition:all 0.7s ease;
+  transform:translateY(-10rem);
+}
+.T {
+  transition:all 0.8s ease;
+  transform:translateX(10rem) translateY(-10rem);
+}
+.A {
+  transition:all 1.5s ease;
+  transform:translateY(10rem);
+}
+.Cc {
+  transition:all 0.8s ease;
+  transform:translateX(5rem) translateY(10rem);
+}
+.Tt {
+  transition:all 0.7s ease;
+  transform:translateX(10rem) translateY(5rem);
+}
+.M {
+  left:3rem;
+  transition: all 0.5s ease;
+  transform:translateX(5rem) translateY(-10rem);
+}
+.E {
+  left:3rem;
+  transition:all 0.5s ease;
+  transform:translateX(15rem);
 }
 .contactme-span{
   font-size:70px;
@@ -402,16 +427,16 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
   text-shadow:2px 0 0 teal,0 2px 0 red,-2px 0 0 teal,0 -2px 0 red;
   color:white;
 }
-.email-span {
+.contact-span {
   position:relative;
   font-weight:800;
   font-size:20px;
   top:5rem;
   right:12.5rem;
-  text-shadow:2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal;
+  text-shadow:2px 0 0 red,0 2px 0 red,-2px 0 0 red,0 -2px 0 red;
   color:white;
 }
-.email-input {
+.contact-input {
   position:relative;
   right:13rem;
   top:3.2rem;
@@ -422,8 +447,15 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
   font-size:18px;
   font-weight:700;
   transition: all 0.3s;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, teal, red) 1;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
 }
-
+.contact-input:focus {
+  outline: none;
+}
 .contactMe form {
   display:flex;
   flex-direction:column;
@@ -431,10 +463,36 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
 .message-input {
   width: 23rem;
   height: 20rem;
-  /* display: inline-block; fix for Firefox */
-  /* use tb-rl instead of vertical-rl */
   padding-top:5px;
   padding-left:3px;
+  resize:none;
+}
+.submit-button {
+  position:relative;
+  left:20rem;
+  bottom:10rem;
+  cursor:pointer;
+  font-size:30px;
+  text-decoration:none;
+  color:red;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  border-right: 2px solid teal;
+  border-left: 2px solid teal;
+  width:240px;
+  height:50px;
+  border-radius:20px;
+  transition:all 0.5s ease;
+  transform: translateX(15rem);
+}
+.submit-button:hover {
+  color:teal;
+  border-top: 2px solid teal;
+  border-bottom: 2px solid teal;
+  border-right: 2px solid red;
+  border-left: 2px solid red;
+  transition: all 0.5s ease;
+  opacity:0;
   
 }
 @keyframes animate {
@@ -444,6 +502,33 @@ background: linear-gradient(0deg, rgba(90,222,174,1) 0%, rgba(255,255,255,1) 100
     color:black;
   }
   
+}
+@keyframes textFloating {
+  0%
+  {
+    top:5rem;
+    transition:0.5s;
+  }
+  25%
+  {
+    top:3rem;
+    transition:1s;
+  }
+  50%
+  {
+    top:5rem;
+    transition:0.5s;
+  }
+  75%
+  {
+    top:4rem;
+    transition:1s
+  }
+  100%
+  {
+    top:5rem;
+    transition:0.5s;
+  }
 }
 @keyframes changeTXT {
   to {
