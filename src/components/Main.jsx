@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useForm, ValidationError } from '@formspree/react';
+import { css } from 'styled-components';
 
 const Main = () => {
     const [message, setMessage] = useState(localStorage.getItem('message') || 'Front-end Dev');
@@ -98,9 +99,19 @@ const Main = () => {
         const contactE = document.querySelector(".E");
         const contactMeInputs = document.querySelector(".contactMeInputs");
         const submitButton = document.querySelector(".submit-button");
+        const htmlpng = document.querySelector(".htmlpng");
+        const csspng = document.querySelector(".csspng");
+        const javascriptpng = document.querySelector(".javascriptpng");
+        const reactpng = document.querySelector(".reactpng");
+        const cpppng = document.querySelector(".cpppng");
+        const javapng = document.querySelector(".javapng");
+        const htmltext = document.querySelector(".htmltext");
+        const reacttext = document.querySelector(".reacttext");
+        const cpptext = document.querySelector(".cpptext");
+        const javatext = document.querySelector(".javatext");
         window.addEventListener("scroll", () => {
           const scrollPosition = window.scrollY;
-          if(scrollPosition > 2670)
+          if(scrollPosition > 4420)
           {
             submitButton.style.transform = "translateX(0rem)";
             submitButton.style.opacity = "1";
@@ -109,7 +120,7 @@ const Main = () => {
             submitButton.style.transform = "translateX(15rem)";
             submitButton.style.opacity = "0";
           }
-          if(scrollPosition > 2500)
+          if(scrollPosition > 4280)
           {
             contactMeInputs.style.transform = "translateX(0rem)";
             contactMeInputs.style.opacity = "1";
@@ -117,7 +128,7 @@ const Main = () => {
             contactMeInputs.style.transform = "translateX(-22rem)";
             contactMeInputs.style.opacity = "0";
           }
-          if(scrollPosition > 2350)
+          if(scrollPosition > 4060)
           {
             contactC.style.opacity = "1";
             contactC.style.transform = "translateX(0rem)";
@@ -157,6 +168,62 @@ const Main = () => {
             contactM.style.transform ="translateX(5rem) translateY(-10rem)";
             contactE.style.opacity = "0";
             contactE.style.transform ="translateX(15rem)";
+          }
+          if(scrollPosition > 3690)
+          {
+            javapng.style.right = "20rem";
+            javapng.style.opacity = "1";
+            javatext.style.opacity = "1";
+          }else {
+            javapng.style.right = "35rem";
+            javapng.style.opacity = "0";
+            javatext.style.opacity = "0";
+          }
+          if(scrollPosition > 3420)
+          {
+            cpppng.style.left = "15rem";
+            cpppng.style.opacity = "1";
+            cpptext.style.opacity = "1";
+          } else {
+            cpppng.style.left = "40rem";
+            cpppng.style.opacity = "0";
+            cpptext.style.opacity = "0";
+          }
+          if(scrollPosition > 3130)
+          {
+            reactpng.style.right = "10rem";
+            reactpng.style.opacity = "1";
+            reacttext.style.opacity = "1";
+          } else {
+            reactpng.style.right = "46rem";
+            reactpng.style.opacity = "0";
+            reacttext.style.opacity = "0";
+          }
+          if(scrollPosition > 2800)
+          {
+            htmlpng.style.top = "25rem";
+            htmlpng.style.opacity = "1";
+            javascriptpng.style.opacity = "1";
+            javascriptpng.style.left = "20rem";
+          } else {
+            htmlpng.style.top = "35rem";
+            htmlpng.style.opacity = "0";
+            javascriptpng.style.opacity = "0";
+            javascriptpng.style.left = "35rem";
+          }
+          if(scrollPosition > 2690)
+          {
+            htmltext.style.opacity = "1";
+          } else {
+            htmltext.style.opacity = "0";
+          }
+          if(scrollPosition > 2615)
+          {
+            csspng.style.top = "15rem";
+            csspng.style.opacity = "1";
+          } else {
+            csspng.style.top = "0rem";
+            csspng.style.opacity = "0";
           }
           if(scrollPosition > 1800)
           {
@@ -263,20 +330,18 @@ const Main = () => {
         </header>
         {/* <span className="letterR" id="letterR" name="letterR"></span>
         <span className="letterK"></span> */}
-            
-        <div className="main-part">
-            
-            <div className="second-part">
-                
-                <section className="aboutme">
+        <section className="aboutme">
                 <span className='aboutme-title'>About me</span>
                 <span className="aboutme-text">Hi, I'm Rinor. I'm a student located in Prishtina, Kosovo.</span>
                 <span className="aboutme-text-two">I'm 20 years old and currently a teacher at <a href="https://programmers-uni-site-client-o8e972i1f-davud600.vercel.app/" target="_blank"className="prouni">Programmer's University</a></span>
                 <span className="aboutme-text-three">You can find me at <a href="https://www.linkedin.com/in/crkc/" target="_blank">LinkedIn</a></span>
                 <span className="aboutme-text-four">I enjoy creating responsive and interactive website which you can check out below!</span>
-                </section>
-
-            </div>
+        </section>
+        <div className="image-grid">
+                <img src="firstSection.png" alt="" className='firstImage'/>
+                <img src="secondSection.png" alt="" className='secondImage'/>
+                <img src="thirdSection.png" alt="" className='thirdImage'/>
+                <img src="fourthSection.png" alt="" className='fourthImage'/>
         </div>
         {/* <div className="slider-container">
         <Slider {...settings}>
@@ -291,12 +356,22 @@ const Main = () => {
         </div>
         </Slider>
         </div> */}
-        <div className="image-grid">
-                <img src="firstSection.png" alt="" className='firstImage'/>
-                <img src="secondSection.png" alt="" className='secondImage'/>
-                <img src="thirdSection.png" alt="" className='thirdImage'/>
-                <img src="fourthSection.png" alt="" className='fourthImage'/>
-        </div>
+
+        <section className="skills">
+            <span className="skills-title">Skills</span>
+            <img src="htmlpng.png" alt="not responding" className="htmlpng"/>
+            <img src="csspng.png" alt="not responding" className="csspng" />
+            <img src="javascriptpng.png" alt="not responding" className="javascriptpng"/>
+            <img src="reactsecondpng.png" alt="not responding" className="reactpng" />
+            <img src="cppseondpng.png" alt="not responding" className="cpppng" />
+            <img src="javasecondpng.png" alt="not responding" className="javapng" />
+            <span className="skillstext htmltext">A disciplined web developer efficient with HTML5, CSS3, and JavaScript. 
+            Able to work both as part of a larger team and individually.</span>
+            <span className="skillstext reacttext">Comprehensive knowledge of React JS platform and core principle</span>
+            <span className="skillstext cpptext">First programming language I picked up, medium-level knowledge. </span>
+            <span className="skillstext javatext">Learned Java in college and became proficient with it</span>
+        </section>
+
         <div className="contactMe" id="contactMe">
           <div className="contactMeText">
           <span className="contactme-span C" id='contactme-span'>C</span>
