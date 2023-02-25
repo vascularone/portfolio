@@ -925,7 +925,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     height:35rem;
   }
   .slider-container {
-    margin-top:5rem;
+    margin-top:10rem;
     margin-bottom:10rem;
   }
 }
@@ -933,6 +933,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
 {
   .lightseven {
     display:none;
+  }
+  .slider-container {
+    height:136vw;
   }
 }
 @media(max-width:640px)
@@ -992,6 +995,19 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .contactMe {
     transform:translateY(-7rem);
+  }
+  .skills {
+    padding-top:5rem;
+  }
+  .slider-container {
+    margin-top:10rem;
+  }
+}
+@media(max-width:550px)
+{
+  .slider-container {
+    height:181.5vw;
+    margin-bottom:0rem;
   }
 }
 @media(max-width:530px)
@@ -1063,7 +1079,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     height:30rem;
   }
   .slider-container {
-    margin-top:2rem;
+    margin-top:10rem;
   }
 }
 /* @media(max-width:860) minimum browser size

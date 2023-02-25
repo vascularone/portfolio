@@ -23,6 +23,21 @@ const Main = () => {
       slidesToScroll: 2,      // Number of slides to scroll at once
       arrows: true,           // Show arrow navigation
       vertical: true,         // Show slides vertically
+      responsive: [
+        {
+          breakpoint: 650,    // Screen width breakpoint
+          settings: {
+            slidesToShow: 3,  // Number of slides to show at this breakpoint
+          }
+        },
+        {
+          breakpoint:550,
+          settings: {
+            slidesToShow: 4,
+            dots: false,
+          }
+        }
+      ]
     };
     useEffect(() => {
         localStorage.setItem('message', message);
