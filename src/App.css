@@ -167,7 +167,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   width:240px;
   height:50px;
   border-radius:20px;
-  right:-48vw;
+  right:-42vw;
   transition:all 0.5s ease;
 }
 .contact-me-text:hover {
@@ -1050,13 +1050,14 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     font-size:20px;
   }
   .contact-me-text {
+    padding-top:1rem;
     right:-23vw;
+    font-size:20px;
+    width:150px;
+    height:30px;
   }
   .javatext {
     left: 3rem;
-  }
-  .contact-me-text {
-    padding-top:1rem;
   }
 }
 @media(max-width: 460px)
