@@ -205,7 +205,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   justify-content:center;
   height:60rem;
   background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(173,255,225,1) 50%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 50%, rgba(255,255,255,1) 100%);
     
 }
 .aboutme a {
@@ -276,6 +276,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   justify-content:center;
   height:103rem;
   transform:translateY(10rem);
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 50%, rgba(255,255,255,1) 100%);
 }
 
 .skills-title 
