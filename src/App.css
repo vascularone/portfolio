@@ -788,6 +788,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .hmtlpng, .javascriptpng, .csspng {
     opacity:1
   }
+  .navbar {
+    margin-bottom:10rem;
+  }
 }
 @media(max-width:1000px)
 {
@@ -874,6 +877,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .aboutme-text-two {
     left:15vw;
   }
+  .main-text-main-text {
+    font-size:60px;
+  }
+  .main-text-second-main {
+    font-size:40px;
+  }
+  .main-text-third-text {
+    font-size:30px;
+  }
 }
 @media(max-width:720px)
 {
@@ -906,6 +918,19 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .contactme-span {
     font-size:50px;
   }
+  .second-logo {
+    width:100px;
+  } 
+  .navbar-photo-tag {
+    width:70px;
+    height:50px;
+    font-size: 40px;
+  }
+  .navbar-github {
+    font-size:17px;
+    top:6rem;
+    right:6.5rem;
+  }
 }
 @media(max-width:530px)
 {
@@ -926,6 +951,18 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .contact-span {
     font-size:20px;
+  }
+  .navbar-photo-tag {
+    right:1rem;
+  }
+  .navbar-github {
+    right:2.5rem;
+  }
+}
+@media(max-width: 460px)
+{
+  .main-text-second-text {
+    width:25rem;
   }
 }
 /* @media(max-width:860) minimum browser size
