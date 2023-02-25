@@ -359,7 +359,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   /* border-bottom: 10px solid teal; */
   border-radius:3px;
   margin-top:10rem;
-  margin-bottom:30rem;
 }
 
 .slick-slide img {
@@ -774,6 +773,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     top:2rem;
     left:2rem;
   }
+  .skills {
+    /* transform:translateY(-20rem); */
+  }
   .contact-me-text {
     right:-35vw;
   }
@@ -795,6 +797,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .navbar {
     margin-bottom:10rem;
   }
+  .main-text {
+    height:40rem;
+  }
 }
 @media(max-width:1000px)
 {
@@ -805,9 +810,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     width:14.458333333333vw;
     height:12.8541666666667vw;
   }
-  .slider-container {
-    margin-bottom:35rem;
-  }
+
   .javatext {
     bottom:10rem;
     left:8rem;
@@ -853,7 +856,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
 }
 @media(max-width:880px){
   .slider-container {
-    margin-bottom:40rem;
+    margin-bottom:5rem;
   }
 }
 @media(max-width:800px)
@@ -879,6 +882,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .second-logo {
     width:150px;
     left: -1rem;
+    top:3rem;
   }
   .aboutme-text , .aboutme-text-two, .aboutme-text-three{
     font-size:20px;
@@ -917,6 +921,13 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .slider-container {
     left:3vw;
   }
+  .main-text {
+    height:35rem;
+  }
+  .slider-container {
+    margin-top:5rem;
+    margin-bottom:10rem;
+  }
 }
 @media (max-width:650px)
 {
@@ -949,7 +960,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .second-logo {
     width:100px;
-    left:-2rem;
+    left:-1rem;
   } 
   .navbar-photo-tag {
     width:70px;
@@ -978,6 +989,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .javapng {
     bottom:10rem;
+  }
+  .contactMe {
+    transform:translateY(-7rem);
   }
 }
 @media(max-width:530px)
@@ -1025,6 +1039,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .javatext {
     left: 3rem;
   }
+  .contact-me-text {
+    padding-top:1rem;
+  }
 }
 @media(max-width: 460px)
 {
@@ -1041,6 +1058,12 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     bottom:12rem;
     width:18.8125vw;
     height:22.416666666667vw;
+  }
+  .main-text {
+    height:30rem;
+  }
+  .slider-container {
+    margin-top:2rem;
   }
 }
 /* @media(max-width:860) minimum browser size
