@@ -6,6 +6,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { css } from 'styled-components';
 
 const Main = () => {
+
     const [message, setMessage] = useState(localStorage.getItem('message') || 'Front-end Dev');
     const [messagetwo, setMessageTwo] = useState(localStorage.getItem('messagetwo') || 'Mentor');
     const [email, setEmail] = useState('');
@@ -14,6 +15,15 @@ const Main = () => {
     const [name, setName] = useState('');
     const [messageLabelStyle, setMessageLabelStyle] = useState({});
     const [messageContact, setMessageContact] = useState('');
+    const settings = {
+      dots: true,             // Show dot indicators
+      infinite: true,         // Allow infinite scrolling
+      speed: 500,             // Transition speed (in ms)
+      slidesToShow: 2,        // Number of slides to show at once
+      slidesToScroll: 2,      // Number of slides to scroll at once
+      arrows: true,           // Show arrow navigation
+      vertical: true,         // Show slides vertically
+    };
     useEffect(() => {
         localStorage.setItem('message', message);
         localStorage.setItem('messagetwo', messagetwo);
@@ -48,11 +58,41 @@ const Main = () => {
           });
         }
       };
+      const handleEmailChangeMobile = (event) => {
+        setEmail(event.target.value);
+      
+        // Check if the input field is not empty
+        if (event.target.value !== '') {
+          setEmailLabelStyle({
+            textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
+            transform: 'translateY(-2rem)',
+            transition: 'all 0.2s',
+          });
+        } else {
+          setEmailLabelStyle({
+            transition: 'all 0.3s'
+          });
+        }
+      };
     const handleNameChange = (event) => {
       setName(event.target.value);
       if(event.target.value !== '') {
         setNameLabelStyle({
           transform: 'translateX(-6rem)',
+          textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
+          transition: 'all 0.2s',
+        });
+      } else {
+        setNameLabelStyle({
+          transition: 'all 0.3s'
+        })
+      }
+    };
+    const handleNameChangeMobile = (event) => {
+      setName(event.target.value);
+      if(event.target.value !== '') {
+        setNameLabelStyle({
+          transform: 'translateY(-2rem)',
           textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
           transition: 'all 0.2s',
         });
@@ -76,6 +116,21 @@ const Main = () => {
         })
       }
     };
+    const handleMessageChangeMobile = (event) => {
+      setMessageContact(event.target.value);
+      if(event.target.value !== '') {
+        setMessageLabelStyle({
+          transform: 'translateY(-2rem)',
+          textShadow: '2px 0 0 teal,0 2px 0 teal,-2px 0 0 teal,0 -2px 0 teal',
+          transition: 'all 0.2s',
+        });
+      } else {
+        setMessageLabelStyle({
+          transition: 'all 0.3s'
+        })
+      }
+    };
+    const isMobile = window.innerWidth < 600;
     
     
     useEffect(() => {
@@ -113,11 +168,9 @@ const Main = () => {
           const scrollPosition = window.scrollY;
           if(scrollPosition > 4420)
           {
-            submitButton.style.transform = "translateX(0rem)";
             submitButton.style.opacity = "1";
             
           } else {
-            submitButton.style.transform = "translateX(15rem)";
             submitButton.style.opacity = "0";
           }
           if(scrollPosition > 4280)
@@ -147,7 +200,7 @@ const Main = () => {
             contactM.style.opacity = "1";
             contactM.style.transform ="translateX(0rem) translateY(0rem)";
             contactE.style.opacity = "1";
-            contactE.style.transform ="translateX(0rem) translateY(0rem)";
+            contactE.style.transform = "translateY(0rem)";
             
           } else {
             contactC.style.opacity ="0";
@@ -163,29 +216,29 @@ const Main = () => {
             contactCc.style.opacity = "0";
             contactCc.style.transform ="translateX(5rem) translateY(10rem)";
             contactTt.style.opacity = "0";
-            contactTt.style.transform ="translateX(10rem) translateY(5rem)";
+            contactTt.style.transform ="translateX(-15rem) translateY(5rem)";
             contactM.style.opacity = "0";
-            contactM.style.transform ="translateX(5rem) translateY(-10rem)";
+            contactM.style.transform ="translateX(0rem) translateY(-15rem)";
             contactE.style.opacity = "0";
-            contactE.style.transform ="translateX(15rem)";
+            contactE.style.transform = "translateY(10rem)";
           }
           if(scrollPosition > 3690)
           {
-            javapng.style.right = "20rem";
+            javapng.style.right = "20vw";
             javapng.style.opacity = "1";
             javatext.style.opacity = "1";
           }else {
-            javapng.style.right = "35rem";
+            javapng.style.right = "40vw";
             javapng.style.opacity = "0";
             javatext.style.opacity = "0";
           }
           if(scrollPosition > 3420)
           {
-            cpppng.style.left = "15rem";
+            cpppng.style.left = "15vw";
             cpppng.style.opacity = "1";
             cpptext.style.opacity = "1";
           } else {
-            cpppng.style.left = "40rem";
+            cpppng.style.left = "40vw";
             cpppng.style.opacity = "0";
             cpptext.style.opacity = "0";
           }
@@ -204,12 +257,12 @@ const Main = () => {
             htmlpng.style.top = "25rem";
             htmlpng.style.opacity = "1";
             javascriptpng.style.opacity = "1";
-            javascriptpng.style.left = "20rem";
+            javascriptpng.style.left = "18.5vw";
           } else {
             htmlpng.style.top = "35rem";
             htmlpng.style.opacity = "0";
             javascriptpng.style.opacity = "0";
-            javascriptpng.style.left = "35rem";
+            javascriptpng.style.left = "33vw";
           }
           if(scrollPosition > 2690)
           {
@@ -219,47 +272,41 @@ const Main = () => {
           }
           if(scrollPosition > 2615)
           {
-            csspng.style.top = "15rem";
+            csspng.style.bottom = "78rem";
             csspng.style.opacity = "1";
           } else {
-            csspng.style.top = "0rem";
+            csspng.style.bottom = "90rem";
             csspng.style.opacity = "0";
           }
           if(scrollPosition > 1800)
           {
-            thirdImage.style.right = "0rem";
             thirdImage.style.transform = "translateY(0rem)";
             thirdImage.style.transition = "all 2s";
             thirdImage.style.opacity = "1";
-            fourthImage.style.left = "0rem";
             fourthImage.style.transform = "translateY(0rem)";
             fourthImage.style.transition = "all 2s";
             fourthImage.style.opacity = "1";
           } else {
-            thirdImage.style.right = "18rem";
             thirdImage.style.transform = "translateY(10rem)";
             thirdImage.style.transition = "all 2s";
             thirdImage.style.opacity = "0";
-            fourthImage.style.left = "18rem";
             fourthImage.style.transform = "translateY(10rem)";
             fourthImage.style.transition = "all 2s";
             fourthImage.style.opacity = "0";
           }
           if(scrollPosition > 1450)
           {
-            firstImage.style.right = "0rem";
             firstImage.style.transform = "translateY(0rem)";
             firstImage.style.transition = "all 2s";
-            secondImage.style.left = "0rem";
             secondImage.style.transform = "translateY(0rem)";
             secondImage.style.transition = "all 2s";
             firstImage.style.opacity = "1";
             secondImage.style.opacity = "1";
           } else {
-            firstImage.style.right = "18rem";
+            // firstImage.style.right = "18rem";
             firstImage.style.transform = "translateY(-10rem)";
             firstImage.style.transition = "all 2s";
-            secondImage.style.left = "18rem";
+            // secondImage.style.left = "18rem";
             secondImage.style.transform = "translateY(-10rem)";
             secondImage.style.transition = "all 2s";
             firstImage.style.opacity = "0";
@@ -309,12 +356,14 @@ const Main = () => {
           }
         });
       }, []);
+      
   return (
     <div>
         <header>
         <div className="navbar">
             <div className="navbarTitle">
-                <img src="rk-logo.svg" alt="not available" />
+                <img src="rk-logo.svg" alt="not available" className="first-logo" />
+                <img src="rk-logo-second.png" alt="not available" className="second-logo"/>
                 <span className="profession-span">Web Designer & Dev</span>
                 <a href="https://github.com/vascularone" target="_blank" className="navbar-photo-tag"></a>
                 <span className="navbar-github">GitHub</span>
@@ -343,19 +392,22 @@ const Main = () => {
                 <img src="thirdSection.png" alt="" className='thirdImage'/>
                 <img src="fourthSection.png" alt="" className='fourthImage'/>
         </div>
-        {/* <div className="slider-container">
+        <div className="slider-container">
         <Slider {...settings}>
         <div>
             <img src="firstSection.png" alt="project 1" />
         </div>
         <div>
-            <img src="secondSection.png" alt="project 2" />
+            <img src="thirdSection.png" alt="project 2" />
         </div>
         <div>
-            <img src="thirdSection.png" alt="project 3" />
+            <img src="secondSection.png" alt="project 3" />
+        </div>
+        <div>
+            <img src="fourthSection.png" alt="project 4" />
         </div>
         </Slider>
-        </div> */}
+        </div>
 
         <section className="skills">
             <span className="skills-title">Skills</span>
@@ -373,6 +425,15 @@ const Main = () => {
         </section>
 
         <div className="contactMe" id="contactMe">
+          <div className="light lightone"></div>
+          <div className="light lighttwo"></div>
+          <div className="light lightthree"></div>
+          <div className="light lightfour"></div>
+          <div className="light lightfive"></div>
+          <div className="light lightsix"></div>
+          <div className="light lightseven"></div>
+          <div className="light lighteight"></div>
+          <div className="light lightnine"></div>
           <div className="contactMeText">
           <span className="contactme-span C" id='contactme-span'>C</span>
           <span className="contactme-span O" id='contactme-span'>O</span>
@@ -387,11 +448,11 @@ const Main = () => {
           <form>
           <div className="contactMeInputs">
           <span className="contact-span" style={emailLabelStyle}>Email</span>
-          <input type="email" className="contact-input email-input"  onChange={handleEmailChange} value={email} required/>
+          <input type="email" className="contact-input email-input"  onChange={isMobile ? handleEmailChangeMobile : handleEmailChange} value={email} required/>
           <span className="contact-span" style={nameLabelStyle}>Subject</span>
-          <input type="text" className="contact-input subject-input"  onChange={handleNameChange} value={name} required/>
+          <input type="text" className="contact-input subject-input"  onChange={isMobile ? handleNameChangeMobile : handleNameChange} value={name} required/>
           <span className="contact-span" style={messageLabelStyle}>Message</span>
-          <textarea className="contact-input message-input" name="message" rows="4" cols="40" value={messageContact} onChange={handleMessageChange} required></textarea>
+          <textarea className="contact-input message-input" name="message" rows="4" cols="40" value={messageContact} onChange={isMobile ? handleMessageChangeMobile : handleMessageChange} required></textarea>
           </div>
           <button className="submit-button">Submit</button>
           </form>
