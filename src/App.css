@@ -290,6 +290,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   transition:all 1s ease;
 }
 .htmlpng {
+  top:25rem;
   right:76vw;
   width:18.22916666666667vw;
   height:13.020833333333vw;
@@ -348,7 +349,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   display: none;
   justify-content: center;
   align-items: center;
-  height: 44.5vw; /* Set the height of the slider */
+  height: 89vw; /* Set the height of the slider */
   width:88.33vw;
   position:relative;
   left:8vw;
@@ -776,6 +777,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .contact-me-text {
     right:-35vw;
   }
+  .skills-title {
+    font-size: 60px;
+  }
   .aboutme-title {
     font-size:60px;
   }
@@ -819,6 +823,18 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .lightsix {
     display:none;
   }
+  .htmlpng {
+    width:21.22916666666667vw;
+    height:16.020833333333vw;
+  }
+  .csspng {
+    width:10.8125vw;
+    height:13.416666666667vw;
+  } 
+  .javascriptpng {
+    width:21.22916666666667vw;
+    height:13.416666666667vw;
+  }
 }
 @media(max-width:950px)
 {
@@ -830,6 +846,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
 {
   .htmltext {
     width:40vw;
+  }
+  .reactpng {
+    top:50rem;
   }
 }
 @media(max-width:880px){
@@ -859,6 +878,10 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .second-logo {
     width:150px;
+    left: -1rem;
+  }
+  .aboutme-text , .aboutme-text-two, .aboutme-text-three{
+    font-size:20px;
   }
   .aboutme-text-four {
     display:none;
@@ -885,6 +908,8 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .main-text-third-text {
     font-size:30px;
+    bottom:0rem;
+
   }
 }
 @media(max-width:720px)
@@ -911,7 +936,11 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .contact-me-text{
     right:-27vw;
   }
+  .skills-title {
+    font-size:45px;
+  }
   .aboutme-title {
+    font-size: 45px;
     right:0;
     left:5rem;
   }
@@ -920,6 +949,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .second-logo {
     width:100px;
+    left:-2rem;
   } 
   .navbar-photo-tag {
     width:70px;
@@ -931,6 +961,24 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
     top:6rem;
     right:6.5rem;
   }
+  .reactpng {
+    top: 53rem;
+    width:20.458333333333vw;
+    height:18.8541666666667vw;
+  }
+  .htmlpng {
+    top:30rem;
+  }
+  .csspng {
+    right:73.5vw;
+     top:25rem;
+  }
+  .javascriptpng {
+    top:30.4rem;
+  }
+  .javapng {
+    bottom:10rem;
+  }
 }
 @media(max-width:530px)
 {
@@ -939,6 +987,10 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   }
   .aboutme-text-two {
     left:20vw;
+  }
+  .javapng {
+    width:14.8125vw;
+    height:18.416666666667vw;
   }
 }
 @media(max-width: 500px)
@@ -958,11 +1010,37 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,182,191,1) 19
   .navbar-github {
     right:2.5rem;
   }
+  .main-text-main-text {
+    font-size:40px;
+  }
+  .main-text-second-main {
+    font-size:30px;
+  }
+  .main-text-third-text {
+    font-size:20px;
+  }
+  .contact-me-text {
+    right:-23vw;
+  }
+  .javatext {
+    left: 3rem;
+  }
 }
 @media(max-width: 460px)
 {
   .main-text-second-text {
     width:25rem;
+  }
+  .contactme-span {
+    left:-2rem;
+  }
+  .M, .E {
+    left:0rem;
+  }
+  .javapng {
+    bottom:12rem;
+    width:18.8125vw;
+    height:22.416666666667vw;
   }
 }
 /* @media(max-width:860) minimum browser size

@@ -224,7 +224,7 @@ const Main = () => {
           }
           if(scrollPosition > 3690)
           {
-            javapng.style.right = "20vw";
+            javapng.style.right = "14vw";
             javapng.style.opacity = "1";
             javatext.style.opacity = "1";
           }else {
@@ -244,22 +244,22 @@ const Main = () => {
           }
           if(scrollPosition > 3130)
           {
-            reactpng.style.right = "10rem";
+            reactpng.style.right = "10vw";
             reactpng.style.opacity = "1";
             reacttext.style.opacity = "1";
           } else {
-            reactpng.style.right = "46rem";
+            reactpng.style.right = "35vw";
             reactpng.style.opacity = "0";
             reacttext.style.opacity = "0";
           }
           if(scrollPosition > 2800)
           {
-            htmlpng.style.top = "25rem";
+            // htmlpng.style.top = "25rem";
             htmlpng.style.opacity = "1";
             javascriptpng.style.opacity = "1";
             javascriptpng.style.left = "18.5vw";
           } else {
-            htmlpng.style.top = "35rem";
+            // htmlpng.style.top = "35rem";
             htmlpng.style.opacity = "0";
             javascriptpng.style.opacity = "0";
             javascriptpng.style.left = "33vw";
